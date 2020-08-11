@@ -21,43 +21,46 @@ function App() {
           </div>
         </div>
       </motion.section>
-      <section className="container mt-6">
-        <div className="columns is-variable is-8">
-          <div className="column">
-            <div className="content ml-4">
-              <p className="heading is-size-5">Title</p>
-              <p>CREATIVE DIRECTOR & ART DIRECTOR</p>
-              <hr className="my-3" />
-              <p className="heading is-size-5">SERVICES</p>
-              <p>
-                BRAND GUIDELINES, FILM CAMPAIGNS, PHOTOGRAPHY, LOGOTYPES, FULL
-                CREATIVE IDÉATION,
-              </p>
-              <hr className="my-3" />
-              <p className="heading is-size-5">INDUSTRIES</p>
-              <p>
-                ELECTRIC CARS, JEWELLERY, SUSTAINABLE BRANDS, INTERNATIONAL
-                BRANDS,
-              </p>
-              <hr className="my-3" />
+      <section className="section">
+        <div className="container mt-6">
+          <div className="columns">
+            <div className="column">
+              <div className="content">
+                <p className="heading is-size-5">Title</p>
+                <p>CREATIVE DIRECTOR & ART DIRECTOR</p>
+                <hr className="my-3" />
+                <p className="heading is-size-5">SERVICES</p>
+                <p>
+                  BRAND GUIDELINES, FILM CAMPAIGNS, PHOTOGRAPHY, LOGOTYPES, FULL
+                  CREATIVE IDÉATION,
+                </p>
+                <hr className="my-3" />
+                <p className="heading is-size-5">INDUSTRIES</p>
+                <p>
+                  ELECTRIC CARS, JEWELLERY, SUSTAINABLE BRANDS, INTERNATIONAL
+                  BRANDS,
+                </p>
+                <hr className="my-3" />
+              </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="content ml-4">
-              <p className="title is-3 has-text-primary">
-                Conceptual Creative Director with a distinct visual expression
-              </p>
-              <p>
-                When creating visual identities, concepts and campaigns for
-                complex businesses Carl-Johan always communicates clearly and
-                simply in both digital and offline arenas, with a distinct
-                visual expression. Clients include SAS, Volvo, Electrolux,
-                Bentley, Kia as well as Jewellery and exclusive design as Lars
-                Wallin. The foundation of his photography work is always honest
-                when he explores and enhances a brand's iconic design features.
-                Carl-Johan is born on a farm and simply loves the outdoors, he
-                is also a passionate skier.{" "}
-              </p>
+            <div className="column is-1"></div>
+            <div className="column">
+              <div className="content">
+                <p className="title is-3 has-text-primary">
+                  Conceptual Creative Director with a distinct visual expression
+                </p>
+                <p>
+                  When creating visual identities, concepts and campaigns for
+                  complex businesses Carl-Johan always communicates clearly and
+                  simply in both digital and offline arenas, with a distinct
+                  visual expression. Clients include SAS, Volvo, Electrolux,
+                  Bentley, Kia as well as Jewellery and exclusive design as Lars
+                  Wallin. The foundation of his photography work is always
+                  honest when he explores and enhances a brand's iconic design
+                  features. Carl-Johan is born on a farm and simply loves the
+                  outdoors, he is also a passionate skier.{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>
