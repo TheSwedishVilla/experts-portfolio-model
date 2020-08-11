@@ -6,8 +6,8 @@ function App() {
     <>
       <motion.section
         animate={{ backgroundSize: ["120%", "100%", "120%"] }}
-        transition={{ type: "spring", duration: 60, loop: Infinity }}
-        className="hero is-large"
+        transition={{ type: "spring", duration: 40, loop: Infinity }}
+        className="hero is-large is-hidden-mobile"
         style={{
           background: "transparent url(/hero.jpg) center center no-repeat",
           backgroundSize: "100%",
@@ -21,6 +21,31 @@ function App() {
           </div>
         </div>
       </motion.section>
+      <section
+        className="hero is-fullheight is-hidden-tablet"
+        style={{
+          background: "transparent url(/hero.jpg) center center no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div
+          className="hero-body"
+          style={{ backgroundColor: "rgba(30, 39, 46,0.3)" }}
+        >
+          <div className="container">
+            <h2 className="title is-3 has-text-white">CARL-JOHAN EKBERG</h2>
+          </div>
+        </div>
+        <div className="section">
+          <motion.div
+            className="is-pulled-right title has-text-white"
+            animate={{ scale: [1.2, 1, 1.2] }}
+            transition={{ type: "spring", loop: Infinity }}
+          >
+            <i className="fas fa-arrow-down has-text-centered "></i>
+          </motion.div>
+        </div>
+      </section>
       <section className="section">
         <div className="container mt-6">
           <div className="columns">
@@ -153,11 +178,11 @@ function App() {
             </div>
           </section>
         </div>
-        <div className="column">
+        <div className="column is-hidden-mobile">
           <motion.section
             className="hero is-dark"
             animate={{ backgroundSize: ["120%", "100%", "120%"] }}
-            transition={{ type: "spring", duration: 60, loop: Infinity }}
+            transition={{ type: "spring", duration: 40, loop: Infinity }}
             style={{
               background:
                 "transparent url(/profile.jpg) center center no-repeat",
@@ -185,6 +210,34 @@ function App() {
               </div>
             </div>
           </motion.section>
+        </div>
+        <div className="column is-hidden-tablet">
+          <section
+            className="hero is-dark"
+            style={{
+              background:
+                "transparent url(/profile.jpg) center center no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <div
+              className="hero-body"
+              style={{
+                backgroundColor: "rgba(30, 39, 46,0.3)",
+              }}
+            >
+              <div className="container has-text-centered mt-6">
+                <p className="title has-color-white">Connect !</p>
+                <p>
+                  Would you like to know more about or meet our Villa member
+                  Carl-Johan? Email our connector.
+                </p>
+                <button className="button is-primary is-rounded">
+                  Message connector
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </>
