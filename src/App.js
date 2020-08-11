@@ -6,7 +6,7 @@ function App() {
     <>
       <motion.section
         animate={{ backgroundSize: ["120%", "100%", "120%"] }}
-        transition={{ type: "spring", duration: 30, loop: Infinity }}
+        transition={{ type: "spring", duration: 60, loop: Infinity }}
         className="hero is-large"
         style={{
           background: "transparent url(/hero.jpg) center center no-repeat",
@@ -154,7 +154,7 @@ function App() {
           <motion.section
             className="hero is-dark"
             animate={{ backgroundSize: ["120%", "100%", "120%"] }}
-            transition={{ type: "spring", duration: 30, loop: Infinity }}
+            transition={{ type: "spring", duration: 60, loop: Infinity }}
             style={{
               background:
                 "transparent url(/profile.jpg) center center no-repeat",
