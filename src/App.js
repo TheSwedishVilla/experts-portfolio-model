@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 function App() {
+  const [projectOpen, setProjectOpen] = useState(null);
   return (
     <>
       <motion.section
@@ -90,72 +91,80 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="hero">
+      <section className="hero is-dark">
         <div className="hero-body">
           <div className="container">
-            <div className="columns is-multiline">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((number) => (
-                <div className="column is-3" key={`gallery${number}`}>
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    style={{
-                      backgroundColor: "transparent",
-                      backgroundImage: `url(/gallery${number}.jpg)`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      height: "250px",
-                      lineHeight: "250px",
-                    }}
+            <p className="title">Previous work</p>
+            <div className="columns is-multiline is-centered">
+              {[1, 2, 3].map((project) => (
+                <div key={project} className="column is-4">
+                  <a
+                    href="#projectDetail"
+                    onClick={() => setProjectOpen(project)}
                   >
-                    <motion.div
-                      className="has-text-centered"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 0.8 }}
-                      style={{
-                        backgroundColor: "rgba(30, 39, 46,1.0)",
-                        height: "100%",
-                      }}
-                    >
-                      <i className="fas fa-search has-text-white is-size-3"></i>
+                    <motion.div className="card" whileHover={{ scale: 1.1 }}>
+                      <div className="card">
+                        <figure
+                          className="image is-4by3"
+                          style={{
+                            backgroundImage: `url(/gallery${project}.jpg)`,
+                            backgroundPosition: "center",
+                            backgroundSize: "cover",
+                          }}
+                        ></figure>
+                        <div className="card-content">
+                          <p className="title has-text-dark">
+                            project {project}
+                          </p>
+                          <p>project desciption</p>
+                        </div>
+                      </div>
                     </motion.div>
-                  </motion.div>
+                  </a>
                 </div>
               ))}
             </div>
+          </div>
+          <div className="container" id="projectDetail">
+            {projectOpen && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <hr />
+                <p className="title">Project {projectOpen}</p>
+                <p className="mb-3">
+                  [MORE INFO ?? date?/company?/hashtags? ----- waiting for
+                  suggestions]
+                </p>
+                <p className="mb-3">
+                  <b>[PROJECT DESCRIPTION]</b> Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Ad commodi suscipit, ullam vitae
+                  esse ex eum nam fugiat, ratione eveniet itaque quis mollitia
+                  obcaecati perferendis velit corporis in? Dignissimos, omnis.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                  tempora, praesentium dolorem totam eaque vitae dolorum non
+                  eius unde deserunt? Nostrum earum accusamus labore perferendis
+                  velit illo nihil placeat laboriosam. Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Earum nulla, eum nostrum
+                  quidem impedit praesentium eius ex esse fugit est neque,
+                  cumque eligendi officia dolorem libero minus sit placeat.
+                  Necessitatibus!
+                </p>
+                <div
+                  style={{ backgroundColor: "#808e9b", height: 500 }}
+                  className="box"
+                >
+                  <b>[Pictures/Videos] :</b>
+                  <p>
+                    [differents possibilities : 1-2 big pictures OR sevral
+                    pictures -> album display]
+                  </p>
+                  <p>[1 video (optional)]</p>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
 
-      <section
-        className="hero mt-6"
-        style={{ backgroundColor: "rgba(210, 218, 226, 0.5)" }}
-      >
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns is-multiline is-mobile">
-              {[1, 2, 3, 4, 5, 6].map((number) => (
-                <div
-                  className="column is-4-mobile is-2-tablet"
-                  key={`logo${number}`}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    style={{
-                      backgroundColor: "transparent",
-                      backgroundImage: `url(/logo${number}.png)`,
-                      backgroundSize: "contain",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      height: "100px",
-                    }}
-                  ></motion.div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
       <div className="columns is-gapless is-multiline">
         <div className="column is-12-tablet is-8-desktop">
           <section className="hero is-primary">
